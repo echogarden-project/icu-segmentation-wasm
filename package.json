@@ -1,0 +1,46 @@
+{
+	"name": "@echogarden/icu-segmentation-wasm",
+	"version": "0.1.0",
+	"description": "WebAssembly port of the ICU library's character, word, line-break, and sentence segmentation methods.",
+	"author": "Rotem Dan",
+	"license": "MIT",
+	"keywords": [
+		"word segmentation",
+		"word boundary detection",
+		"sentence segmentation",
+		"sentence boundary detection",
+		"word wrapping"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/echogarden-project/icu-segmentation-wasm"
+	},
+	"bugs": {
+		"url": "https://github.com/echogarden-project/icu-segmentation-wasm/issues"
+	},
+	"main": "./dist/Exports.js",
+	"type": "module",
+	"files": [
+		"dist",
+		"src",
+		"wasm",
+		"tsconfig.json",
+		"LICENSE.md",
+		"README.md"
+	],
+	"scripts": {
+		"test": "node dist/Test.js"
+	},
+	"//dependencies": {
+		"wasm-heap-manager": "file:../../wasm-heap-manager"
+	},
+	"dependencies": {
+		"wasm-heap-manager": "^0.1.0"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.0"
+	}
+}
