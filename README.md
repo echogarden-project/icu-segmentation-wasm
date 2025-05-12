@@ -15,7 +15,7 @@ Provides natural language text segmentation based on the [ICU (International Com
 npm install @echogarden/icu-segmentation-wasm
 ```
 
-**Note**: package size is about 30 MB uncompressed (11 MB gzipped), due to the size of the ICU data bundled into the WebAssembly binary.
+**Note**: package size is about 32 MB uncompressed (13.5 MB gzipped), due to the size of the ICU data bundled into the WebAssembly binary.
 
 ## Usage
 
@@ -76,7 +76,7 @@ for (const boundaryIndex of createSentenceBreakIterator(text, 'ru')) {
 // 37
 ```
 
-## Build guide
+## Building the WebAssembly module
 
 See [this guide](docs/Building.md), which goes through the process of how ICU is built and linked to the WebAssembly wrapper used in this package.
 
