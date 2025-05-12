@@ -3,13 +3,13 @@
 #include <unicode/udata.h>
 
 #ifdef INCLUDE_ICU_DATA
-#include "icudt68l_dat.c"
+#include "icudt77l_dat.c"
 
 // Load internal ICU data
 extern "C" int loadInternalICUData() {
 	UErrorCode errorCode = U_ZERO_ERROR;
 
-	udata_setCommonData((void*)icudt68l_dat.bytes, &errorCode);
+	udata_setCommonData((void*)icudt77l_dat.bytes, &errorCode);
 
 	if (U_FAILURE(errorCode)) {
 		// Handle the error (e.g., print error message)

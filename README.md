@@ -1,6 +1,6 @@
-# ICU Segmentation (WebAssembly port)
+# ICU Segmentation Library (WebAssembly port)
 
-Provides natural language segmentation based on the [ICU (International Components for
+Provides natural language text segmentation based on the [ICU (International Components for
     Unicode) C++ library](https://icu.unicode.org/), ported to WebAssembly.
 
 * **Character segmentation** finds the boundaries between grapheme clusters, which may be longer than a single Unicode codepoint, taking into account various linguistic properties
@@ -15,7 +15,7 @@ Provides natural language segmentation based on the [ICU (International Componen
 npm install @echogarden/icu-segmentation-wasm
 ```
 
-**Note**: package size is about 27 MB uncompressed (11 MB gzipped), due to the size of the ICU data bundled into the WebAssembly binary.
+**Note**: package size is about 30 MB uncompressed (11 MB gzipped), due to the size of the ICU data bundled into the WebAssembly binary.
 
 ## Usage
 
@@ -75,6 +75,10 @@ for (const boundaryIndex of createSentenceBreakIterator(text, 'ru')) {
 // 13
 // 37
 ```
+
+## Build guide
+
+See [this guide](docs/Building.md), which goes through the process of how ICU is built and linked to the WebAssembly wrapper used in this package.
 
 ## License
 
