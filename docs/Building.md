@@ -4,7 +4,7 @@
 
 Install and activate [latest Emscripten](https://emscripten.org/docs/getting_started/downloads.html).
 
-Use `-s USE_ICU=1` to the command line:
+Use `-s USE_ICU=1` in the command line:
 
 (at the base directory of the project)
 ```
@@ -28,10 +28,10 @@ emmake make -j 4
 emmake make install
 ```
 
-Then copy files `libicuuc.a` `libicudata.a`, `libicui18n.a` from `install/lib` directory to this project's `lib/icu/lib`, and copy the headers from `install/include` to this project's `lib/icu/include`.
+Then copy files `libicuuc.a`, `libicui18n.a` and `libicudata.a` from `install/lib` directory to this project's `lib/icu/lib`, and copy the headers from `install/include` to this project's `lib/icu/include`.
 
 
-The WebAssembly library is built with:
+The main `.wasm` binary is built with:
 
 (at the base directory of the project)
 ```
