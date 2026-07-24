@@ -1,5 +1,5 @@
-import * as ICUSegmantation from './Exports.js'
-import { Timer } from './Timer.js'
+import * as ICUSegmantation from '../exports/Exports.js'
+import { Timer } from '../utilities/Timer.js'
 
 const log = console.log
 
@@ -72,7 +72,7 @@ let wasmInstance: any
 
 export async function getWasmModule() {
 	if (!wasmInstance) {
-		const { default: initializer } = await import('../wasm/icu-segmentation.js')
+		const { default: initializer } = await import('../../wasm/icu-segmentation.js')
 
 		wasmInstance = await initializer()
 	}

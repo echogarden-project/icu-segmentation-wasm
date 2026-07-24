@@ -119,7 +119,7 @@ async function getWasmModule() {
 		return wasmModule
 	}
 
-	const { default: initializer } = await import('../wasm/icu-segmentation.js')
+	const { default: initializer } = await import('../../wasm/icu-segmentation.js')
 
 	wasmModule = await initializer()
 
